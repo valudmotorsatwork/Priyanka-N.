@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="src" path="libraries"/>
+	<classpathentry excluding="src/|res/|libraries/" kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="libraries/itext-pdfa-5.5.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="libraries/itext-pdfa-5.5.5-sources.jar"/>
+	<classpathentry kind="lib" path="libraries/itext-pdfa-5.5.5.jar"/>
+	<classpathentry kind="lib" path="libraries/itext-xtra-5.5.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="libraries/itext-xtra-5.5.5-sources.jar"/>
+	<classpathentry kind="lib" path="libraries/itext-xtra-5.5.5.jar"/>
+	<classpathentry kind="lib" path="libraries/itextpdf-5.5.5-javadoc.jar"/>
+	<classpathentry kind="lib" path="libraries/itextpdf-5.5.5-sources.jar"/>
+	<classpathentry kind="lib" path="libraries/itextpdf-5.5.5.jar"/>
+	<classpathentry kind="lib" path="libraries/poi-3.15-beta1.jar"/>
+	<classpathentry kind="lib" path="libraries/poi-examples-3.15-beta1.jar"/>
+	<classpathentry kind="lib" path="libraries/poi-excelant-3.15-beta1.jar"/>
+	<classpathentry kind="lib" path="libraries/poi-ooxml-3.15-beta1.jar"/>
+	<classpathentry kind="lib" path="libraries/poi-ooxml-schemas-3.15-beta1.jar"/>
+	<classpathentry kind="lib" path="libraries/poi-scratchpad-3.15-beta1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

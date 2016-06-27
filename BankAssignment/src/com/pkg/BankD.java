@@ -1,4 +1,4 @@
-package a;
+package com.pkg;
 
 
 public class BankD {

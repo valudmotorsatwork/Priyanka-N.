@@ -11,6 +11,8 @@ public class Application {
 		
 		WriteXls xls=new WriteXls();
 		
+		// open xls file generated from res folder itself.
+		
 		xl.GetData();
 		
 		List<String> data=xl.GetData();
@@ -18,7 +20,12 @@ public class Application {
 		xls.writeXls(data);
 		
 		PdfClass pdfclass=new PdfClass();
-		pdfclass.ToPdf();
+		pdfclass.ToPdf(data);
+		
+		
+		// to open pdf file expand referenced libraries tab and within it right
+				// click on pdffile and open with -> other -> external programs-> adobe
+				// acrobat document
 	}
 
 }

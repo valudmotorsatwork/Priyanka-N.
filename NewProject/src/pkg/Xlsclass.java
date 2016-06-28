@@ -2,9 +2,9 @@ package pkg;
 
 import java.util.List;
 import java.io.BufferedReader;
-import java.io.File;
+
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+
 import java.io.FileReader;
 
 import java.io.IOException;
@@ -12,19 +12,26 @@ import java.util.ArrayList;
 
 import java.util.StringTokenizer;
 
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.usermodel.HSSFFont;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.hssf.util.HSSFColor;
-
-import org.apache.poi.ss.usermodel.Cell;
 
 //import dao.GetSet;
 
 public class Xlsclass {
-
+private double reconSum;
+private double totReconSum;
+private double tempReconSum;
+private double tempTotReconSum;
+	private double getReconSum() {
+	return reconSum;
+}
+private void setReconSum(double reconSum) {
+	this.reconSum = reconSum;
+}
+private double getTotReconSum() {
+	return totReconSum;
+}
+private void setTotReconSum(double totReconSum) {
+	this.totReconSum = totReconSum;
+}
 	public List<String> GetData() // method
 	{
 		String fileName = "./res/ass1_input.txt";
@@ -81,12 +88,26 @@ public class Xlsclass {
 					for (i = 0; i < arr.length; i++) {
 						data.add(arr[i]);
 					}
-
+					
+					if(cnt!=0)
+					{
+						tempReconSum=tempReconSum+Double.parseDouble(arr[4]);
+						setReconSum(tempReconSum);
+						tempTotReconSum=tempTotReconSum+Double.parseDouble(arr[3]);
+						setTotReconSum(tempTotReconSum);
+					}
 					cnt++;
+					
 				}
-			}
 			
+				
+			}
+			data.add(String.valueOf(getReconSum()));
+			data.add(String.valueOf(getTotReconSum()));
 			bufferedReader.close();
+			
+			
+			
 		} catch (FileNotFoundException ex) {
 			System.out.println("Unable to open file '" + fileName + "'");
 		} catch (IOException ex) {

@@ -8,6 +8,7 @@ public class CityBrowser {
 	{
 		GuiClass gcl=new GuiClass();
 		gcl.searchByName();
+		
 	}
 
 }

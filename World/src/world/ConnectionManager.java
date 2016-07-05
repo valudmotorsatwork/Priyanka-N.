@@ -3,31 +3,23 @@ package world;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import world.service.*;
 
 public class ConnectionManager {
-	// String filename = "world.config";
-	// ClassLoader loader = PropertyManager.class.getClassLoader( );
-	// InputStream instream = loader.getResourceAsStream( filename );
 
 	public static Connection getConnection() throws SQLException {
+		
 
-		String driver = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://localhost:3306/world";
-		String user = "sa";
-		String password = "sa123";
-		// Properties prop=new Properties();
-		// InputStream in = new FileInputStream("world.config");
-		// prop.load(in);
-		// in.close();
 		Connection conn = null;
 
 		{
 			if (conn == null)
 				try {
 					// Properties prop=loadPropertiesFile();
-					Class.forName(driver);
-					System.out.println("driver loaded");
-					conn = DriverManager.getConnection(url, user, password);
+					Class.forName(PropertyManager.getProperty("DB_DRIVER_CLASS"));
+					System.out.println("Driver loaded successfully");
+					conn = DriverManager.getConnection(PropertyManager.getProperty("DB_URL"),
+							PropertyManager.getProperty("DB_USERNAME"), PropertyManager.getProperty("DB_PASSWORD"));
 					System.out.println("Connection Established");
 				} catch (Exception e) {
 					e.printStackTrace();

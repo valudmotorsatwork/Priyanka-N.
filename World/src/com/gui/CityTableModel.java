@@ -10,7 +10,7 @@ public class CityTableModel extends AbstractTableModel {
 	/** the city data to show in JTable */
 	private List<City> cities;
 	/** the column names to show in JTable */
-	private static final String[] FIELD_NAMES = { "Name", "District", "Country", "Population" };
+	private static final String[] FIELD_NAMES = { "ID","Name", "District", "Country", "Population" };
 
 	public CityTableModel() {
 		cities = new java.util.ArrayList<City>(); // to avoid NullPointer
@@ -37,12 +37,14 @@ public class CityTableModel extends AbstractTableModel {
 		City city = cities.get(row);
 		switch (col) {
 		case 0:
-			return city.getName();
+			return city.getId();
 		case 1:
-			return city.getDistrict();
+			return city.getName();
 		case 2:
-			return city.getCountrycode();
+			return city.getDistrict();
 		case 3:
+			return city.getCountrycode();
+		case 4:
 			return city.getPopulation();
 		default:
 			return "";

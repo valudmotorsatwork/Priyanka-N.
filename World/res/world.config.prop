@@ -1,5 +1,5 @@
 DB_DRIVER_CLASS=com.mysql.jdbc.Driver
-DB_URL=jdbc:jdbc:mysql://localhost:3306/World
+DB_URL=jdbc:mysql://localhost:3306/World
 DB_USERNAME=sa
 DB_PASSWORD=sa123
  

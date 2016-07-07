@@ -146,7 +146,7 @@ public class GuiClass extends JFrame implements ActionListener {
 	}
 
 	private void updateCity() throws SQLException {
-		String sql = "Update Employee " + "SET id = '" + tf5.getText() + "'," + "name = '" + tf1.getText() + "',"
+		String sql = "Update City " + "SET id = '" + tf5.getText() + "'," + "name = '" + tf1.getText() + "',"
 				+ "countrycode = '" + tf3.getText() + "'," + "district = '" + tf2.getText() + "'," + "population = '"
 				+ tf4.getText() + "'" + "Where name = '" + tf1.getText() + "'";
 

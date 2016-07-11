@@ -39,6 +39,9 @@ public class DAO {
 		return cityList;
 
 	}
+	
+	
+	
 
 	@SuppressWarnings("static-access")
 	public void doUpdate(com.model.City city) throws SQLException

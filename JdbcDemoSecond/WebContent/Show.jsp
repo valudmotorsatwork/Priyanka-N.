@@ -18,17 +18,17 @@
 		<div class="row">
 			<div class="span12">
 				<kendo:grid name="Table" pageable="true" resizable="true">
-					<kendo:grid-editable mode="popup"/>
+					<kendo:grid-editable mode="popup" />
 					<kendo:grid-pageable pageSizes="true" refresh="true"
 						buttonCount="3" />
 					<kendo:grid-toolbar>
-						<kendo:grid-toolbarItem name="create"/>
+						<kendo:grid-toolbarItem name="create" />
 					</kendo:grid-toolbar>
 
 					<kendo:dataSource pageSize="5">
 						<kendo:dataSource-transport>
-							<kendo:dataSource-schema total="Total" data="Data"/>
-							<kendo:dataSource-transport-read url="DD"/>
+							<kendo:dataSource-schema total="Total" data="Data" />
+							<kendo:dataSource-transport-read url="DD" />
 							<kendo:dataSource-transport-update url="DD?update" type="post" />
 							<kendo:dataSource-transport-create url="DD?create" type="post" />
 							<kendo:dataSource-transport-destroy url="DD?destroy" type="post" />
@@ -63,9 +63,9 @@
 						<kendo:grid-column title="Population" field="population"></kendo:grid-column>
 						<kendo:grid-column>
 							<kendo:grid-column-command>
-								<kendo:grid-column-commandItem name="edit" ></kendo:grid-column-commandItem>
+								<kendo:grid-column-commandItem name="edit"></kendo:grid-column-commandItem>
 								<kendo:grid-column-commandItem name="destroy"></kendo:grid-column-commandItem>
-								
+
 							</kendo:grid-column-command>
 						</kendo:grid-column>
 					</kendo:grid-columns>
